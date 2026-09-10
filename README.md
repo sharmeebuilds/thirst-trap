@@ -9,7 +9,7 @@ A "thirst trap" usually means a photo posted to get attention. This one's a trap
 Clone the repo and run it straight away — no install step needed beyond having Python 3.8+ on your machine:
 
 ```bash
-git clone https://github.com/<your-username>/thirst-trap.git
+git clone https://github.com/sharmeebuilds/thirst-trap.git
 cd thirst-trap
 python3 water_usage.py --days 30
 ```
