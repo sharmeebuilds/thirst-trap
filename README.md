@@ -76,27 +76,19 @@ TOTAL                            2,580,645,524  23255.0325      58137.581
 
 ## Using it as a Claude Code slash command
 
-You can wire this up so you can just type `/water-usage 30` inside any Claude Code session.
+`thirst-trap` ships as a Claude Code plugin (see `.claude-plugin/plugin.json` and `commands/water-usage.md`), so you can just type `/water-usage 30` inside any Claude Code session once it's installed.
 
-1. Move the script somewhere persistent: `mkdir -p ~/.claude/scripts && cp water_usage.py ~/.claude/scripts/water_usage.py`
-2. Create the personal commands folder: `mkdir -p ~/.claude/commands`
-3. Create `~/.claude/commands/water-usage.md` with:
+**Quickest way — drop it in your skills directory:**
 
-   ```
-   ---
-   description: Estimate the water footprint of your Claude Code token usage
-   argument-hint: [days]
-   ---
+```bash
+git clone https://github.com/sharmeebuilds/thirst-trap.git ~/.claude/skills/thirst-trap
+```
 
-   Run the water usage estimator script using the Bash tool with this exact command
-   (default to 30 days if no argument was given):
+Claude Code auto-loads any plugin folder under `~/.claude/skills/` as `<name>@skills-dir` — start a new session and it'll show up as `thirst-trap@skills-dir` in `claude plugin list`.
 
-   python3 ~/.claude/scripts/water_usage.py --days ${ARGUMENTS:-30}
+**Via a marketplace:** if you're distributing this through a Claude Code plugin marketplace instead, add the marketplace with `claude plugin marketplace add <source>` and then `claude plugin install thirst-trap@<marketplace>`.
 
-   Then show me its full output as-is, without summarizing or altering the numbers.
-   ```
-
-4. Start a new Claude Code session and run `/water-usage 30`.
+Either way, start a new Claude Code session and run `/water-usage 30`.
 
 ## Tuning the estimate
 
