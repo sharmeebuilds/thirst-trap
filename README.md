@@ -1,5 +1,7 @@
 # thirst-trap 💧
 
+*You might forget to drink your water — but you definitely made Claude drink some. Here's the tab.*
+
 A "thirst trap" usually means a photo posted to get attention. This one's a trap in the literal sense: it shows you how much water your Claude Code usage is estimated to have evaporated at a data center, cooling the GPUs that answered your prompts.
 
 `thirst-trap` reads your local Claude Code session logs, sums up the tokens you've used per model over a given time window, and converts that into a rough estimate of energy and water consumption.
