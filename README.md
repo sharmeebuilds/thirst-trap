@@ -25,7 +25,7 @@ That's it — it reads your existing `~/.claude/projects/` logs and prints the r
 
 ## ⚠️ How accurate is this, really?
 
-**Short answer: the token counts are accurate. The water number is a rough order-of-magnitude estimate, not a measurement.** Treat it as a "this is the right ballpark" tool, not a precise footprint calculator. A few reasons why:
+**Short answer: the token counts are accurate. The water number is a rough ORDER-OF-MAGNITUDE estimate, not a measurement.** Treat it as a "this is the right ballpark" tool, not a precise footprint calculator. A few reasons why:
 
 1. **The energy-per-token baseline isn't Claude-specific.** Anthropic hasn't published per-token energy figures for any Claude model. The baseline here (`0.009 kWh per 1,000 tokens`) is extrapolated from published research on comparably-sized open models (Llama-3-70B, Falcon-180B class) running on older hardware. Claude's actual hardware, architecture, and inference optimizations aren't public, so this could be off by a wide margin in either direction.
 2. **Per-model multipliers are guesses.** The Haiku/Sonnet/Opus/Mythos/Fable scaling factors in the script reflect a plausible "smaller model uses less energy" assumption — they aren't derived from any confirmed data.
