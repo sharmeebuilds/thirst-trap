@@ -4,6 +4,8 @@ A "thirst trap" usually means a photo posted to get attention. This one's a trap
 
 `thirst-trap` reads your local Claude Code session logs, sums up the tokens you've used per model over a given time window, and converts that into a rough estimate of energy and water consumption.
 
+> **Disclaimer:** This tool is for awareness purposes only. It does not imply any confirmed, official, or precise figure for Claude's actual water or energy usage — see the accuracy section below before drawing any conclusions from the numbers.
+
 ## Getting started
 
 Clone the repo and run it straight away — no install step needed beyond having Python 3.8+ on your machine:
